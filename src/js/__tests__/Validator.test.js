@@ -8,8 +8,8 @@ describe('Validator class', () => {
       <div>
         <input class="input" />
         <div class="validation-message"></div>
-        <div class="card-logo VISA"></div>
-        <div class="card-logo MASTERCARD"></div>
+        <div class="card-logo visa"></div>
+        <div class="card-logo mastercard"></div>
       </div>
     `;
 
@@ -30,11 +30,11 @@ describe('Validator class', () => {
   });
 
   test('getCardType должен вернуть корректный тип карты', () => {
-    expect(validator.getCardType('4111111111111111')).toBe('VISA');
-    expect(validator.getCardType('5152674556410329')).toBe('MASTERCARD');
-    expect(validator.getCardType('6011111111111117')).toBe('MAESTRO');
-    expect(validator.getCardType('343116428895577')).toBe('AMERICAN_EXPRESS');
-    expect(validator.getCardType('2200700148940686')).toBe('MIR');
+    expect(validator.getCardType('4111111111111111')).toBe('visa');
+    expect(validator.getCardType('5152674556410329')).toBe('mastercard');
+    expect(validator.getCardType('6011111111111117')).toBe('maestro');
+    expect(validator.getCardType('343116428895577')).toBe('american_express');
+    expect(validator.getCardType('2200700148940686')).toBe('mir');
     expect(validator.getCardType('1234567890123456')).toBe('Unknown');
   });
 
@@ -61,7 +61,7 @@ describe('Validator class', () => {
     validator.updateCardLogoVisibility(validCardNumber);
 
     expect(validator.cardLogos[0].style.filter).toBe('brightness(100%)');
-    expect(validator.cardLogos[1].style.filter).toBe('brightness(35%)');
+    expect(validator.cardLogos[1].style.filter).toBe('brightness(45%)');
   });
 
   test('handleCardInput обновить видимость логотипов для карт в инпуте', () => {
@@ -70,7 +70,7 @@ describe('Validator class', () => {
     validator.handleCardInput();
 
     expect(validator.cardLogos[0].style.filter).toBe('brightness(100%)');
-    expect(validator.cardLogos[1].style.filter).toBe('brightness(35%)');
+    expect(validator.cardLogos[1].style.filter).toBe('brightness(45%)');
   });
 
   test('handleCardInput должен сбросить видимость логотипов для карт в инпуте', () => {
