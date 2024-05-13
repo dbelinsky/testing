@@ -37,15 +37,15 @@ export class Validator {
     const firstDigit = cleanedNumber.charAt(0);
 
     if (/^4/.test(firstDigit)) {
-      return 'VISA';
+      return 'visa';
     } else if (/^5/.test(firstDigit)) {
-      return 'MASTERCARD';
+      return 'mastercard';
     } else if (/^2/.test(firstDigit)) {
-      return 'MIR';
+      return 'mir';
     } else if (/^6/.test(firstDigit)) {
-      return 'MAESTRO';
+      return 'maestro';
     } else if (/^3[47]/.test(cleanedNumber)) {
-      return 'AMERICAN_EXPRESS';
+      return 'american_express';
     } else {
       return 'Unknown';
     }
@@ -60,7 +60,7 @@ export class Validator {
       const message = `Карта действительна. Тип: ${cardType}`;
       displayValidationMessage(this.validationMessage, message);
     } else {
-      displayValidationMessage(this.validationMessage, 'Недействительный номер карты. Пожалуйста, проверьте ещё раз.');
+      displayValidationMessage(this.validationMessage, 'Invalid card number. Try again');
     }
   }
 
@@ -71,7 +71,7 @@ export class Validator {
       if (logo.classList.contains(cardType)) {
         logo.style.filter = 'brightness(100%)';
       } else {
-        logo.style.filter = 'brightness(35%)';
+        logo.style.filter = 'brightness(45%)';
       }
     });
   }
