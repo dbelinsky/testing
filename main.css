@@ -1,0 +1,90 @@
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+.card-form-widget {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.img-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-logo {
+  margin-bottom: 8px;
+  width: 50px;
+  height: 30px;
+  object-fit: contain;
+  border: 1px solid #e3e2e2;
+  border-radius: 5px;
+  background-color: #e3e2e2;
+  box-shadow: 0px 2px 4px 0px #000;
+}
+
+.card-logo:hover {
+  filter: brightness(10%);
+  transition: filter 0.5s;
+}
+
+.input {
+  height: 20px;
+  width: 140px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-right: 5px;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.75);
+}
+
+.button {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #fff;
+  background-color: #5cb85c;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+
+.validation-message {
+  font-size: 14px;
+  margin-top: 8px;
+  width: 330px;
+  font-weight: bold;
+  color: rgb(135, 7, 7);
+}
+
+
+/*# sourceMappingURL=main.css.map*/
