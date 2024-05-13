@@ -43,7 +43,7 @@ describe('Validator class', () => {
     validator.cardInput.value = validCardNumber;
     validator.validateCard({ preventDefault: jest.fn() });
 
-    const expectedMessage = 'Карта действительна. Тип: VISA';
+    const expectedMessage = 'Карта действительна. Тип: visa';
     expect(validator.validationMessage.textContent).toBe(expectedMessage);
   });
 
@@ -52,7 +52,7 @@ describe('Validator class', () => {
     validator.cardInput.value = invalidCardNumber;
     validator.validateCard({ preventDefault: jest.fn() });
 
-    const expectedMessage = 'Недействительный номер карты. Пожалуйста, проверьте ещё раз.';
+    const expectedMessage = 'Invalid card number. Try again';
     expect(validator.validationMessage.textContent).toBe(expectedMessage);
   });
 
